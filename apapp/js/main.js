@@ -9,4 +9,6 @@ randomize: document.querySelector(),
 remove: document.querySelector(),
 likedsongs: document.querySelector(),
 dislikedsongs: document.querySelector(),
+likeds: document.querySelector(),
+dislikeds: document.querySelector(),
 };
