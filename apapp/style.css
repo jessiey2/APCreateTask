@@ -1,0 +1,209 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+.all-display {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 2rem;
+  text-align: center;
+  justify-content: center;
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+.likeds {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 2rem;
+  margin: 2rem;
+  padding-top: 2rem;
+}
+.subheading {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.special {
+  margin: auto;
+  margin-top: 2rem;
+  transition: 0.3s;
+}
+.special:hover {
+  color: #1db954;
+}
+.b:hover {
+  color: #1db954;
+}
+.b:hover svg {
+  fill: #1db954;
+}
+.remove {
+  fill: #1db954;
+  margin: auto;
+  display: block;
+  margin-top: 1rem;
+  width: 2rem;
+}
+.remove:hover {
+  fill: rgb(248, 109, 109);
+}
+.b {
+  transition: 0.3s;
+}
+.heart {
+  fill: white;
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+.heart:hover {
+  opacity: 1;
+}
+.albums {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: 15rem;
+}
+.sidenav {
+  height: auto;
+  padding-left: 2rem;
+  padding-top: 6rem;
+  background-color: rgb(57, 57, 57);
+  flex-direction: column;
+  display: flex;
+  width: 22%;
+  margin-right: 2rem;
+}
+.lsongs {
+  transition: all 0.8s;
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  padding: 10px;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.dsongs {
+  transition: all 0.8s;
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  padding: 10px;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.liked-display {
+  display: grid;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 3rem;
+  text-align: center;
+  justify-content: center;
+}
+.icons {
+  width: 60%;
+  margin: auto;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+svg {
+  width: 1.5rem;
+  transition: 0.3s;
+}
+svg:hover {
+  opacity: 0.7;
+}
+.refresh {
+  fill: #53d280;
+}
+.up {
+  fill: #7289da;
+}
+.down {
+  fill: rgb(248, 109, 109);
+}
+.body {
+  background-color: #d8d4d4;
+  background-size: cover;
+  background: linear-gradient(
+    to bottom,
+    rgb(97, 97, 97) 0%,
+    rgb(57, 57, 57) 100%
+  );
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.album-card {
+  padding-top: 2rem;
+  width: 20rem;
+  margin: auto;
+  justify-content: center;
+  border-radius: 1.3rem;
+  height: 34rem;
+  margin-top: 2rem;
+
+  background-color: #252525;
+}
+img {
+  border-radius: 1rem;
+  width: 80%;
+  justify-self: center;
+  margin: auto;
+  display: block;
+}
+.name {
+  font-size: 1.8rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.artist {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+.text-group {
+  text-align: left;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.button:hover {
+  background-color: #1db954c9;
+}
+button {
+  background: none;
+  border: none;
+}
+.button {
+  border: none;
+  padding: 5px 18px 5px 18px;
+  background-color: #1db954;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  margin: auto;
+  display: block;
+  width: fit-content;
+  margin-top: 2.5rem;
+  transition: 0.3s;
+}
