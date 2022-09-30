@@ -1,4 +1,4 @@
-const albums =[
+const songs =[
     {
       img: "https://i.scdn.co/image/ab67616d0000b273d6a601f98263dd6518344fb0",
       alt: "over 85 album cover",
@@ -397,3 +397,4 @@ const albums =[
       link: "https://open.spotify.com/user/cbqgzk44ahfntfp2ddv7kny73?si=cw2B5TF5TFGxkPZ5zaZy_A",
     },
   ];
+  export { songs };
