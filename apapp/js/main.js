@@ -8,11 +8,11 @@ console.log(disliked);
 const DOMSelectors = {
 likenav: document.querySelector('.lsongs'),
 dislikenav: document.querySelector('.dsongs'),
-likebutton: document.getElementById("up"),
-dislikebutton: document.getElementById("down"),
-refreshbutton: document.getElementById("refresh"),
-removel: document.getElementById("removel"),
-removed: document.getElementById("removed"),
+likebutton: document.getElementById('up'),
+dislikebutton: document.getElementById('down'),
+refreshbutton: document.getElementById('refresh'),
+removel: document.getElementById('removel'),
+removed: document.getElementById('removed'),
 likedsection: document.querySelector('.likedsongs'),
 dislikedsection: document.querySelector('.dislikedsongs'),
 likeds: document.querySelector('.likeds'),
@@ -154,14 +154,12 @@ DOMSelectors.dislikenav.addEventListener('click', function() {
  });
  
  
- DOMSelectors.dislikebutton.addEventListener('click', function(card) {
-
+ DOMSelectors.dislikebutton.addEventListener('onclick', function(card) {
  });
  DOMSelectors.likebutton.addEventListener('click', function(card) {
 
  });
  DOMSelectors.refreshbutton.addEventListener('click', function(card) {
-
  });
  DOMSelectors.removed.addEventListener('click', function(index) {
 
