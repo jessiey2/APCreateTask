@@ -154,10 +154,11 @@ DOMSelectors.dislikenav.addEventListener('click', function() {
  });
  
  
- DOMSelectors.dislikebutton.addEventListener('onclick', function() {
-   
- });
+ DOMSelectors.dislikebutton.addEventListener('click', function(e) {
+  e.target.parentElement.remove()
+});
  DOMSelectors.likebutton.addEventListener('click', function(card) {
+
 
  });
  DOMSelectors.refreshbutton.addEventListener('click', function(card) {
