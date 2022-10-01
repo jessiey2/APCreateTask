@@ -45,6 +45,9 @@ margin: auto;
   margin: 2rem;
   padding-top: 2rem;
 }
+.head{
+  margin-top: 5rem;
+}
 h2 {
   text-align: center;
   color: rgb(255, 255, 255);
@@ -62,7 +65,7 @@ h2 {
 .b:hover{
   color: #1db954;
 }
-#removed {
+.removed {
   fill: #1db954;
   margin: auto;
   display: block;
@@ -70,11 +73,11 @@ h2 {
   width: 3rem;
 
 }
-#removed:hover {
+.removed:hover {
   fill: rgb(248, 109, 109);
 }
 
-#removel {
+.removel {
   fill: #1db954;
   margin: auto;
   display: block;
@@ -82,7 +85,7 @@ h2 {
   width: 3rem;
 
 }
-#removel:hover {
+.removel:hover {
   fill: rgb(248, 109, 109);
 }
 .b {
@@ -171,13 +174,13 @@ svg {
 svg:hover {
   opacity: 0.7;
 }
-#refresh {
+.refresh {
   fill: #53d280;
 }
-#up {
+.up {
   fill: #7289da;
 }
-#down {
+.down {
   fill: rgb(248, 109, 109);
 }
 .body {

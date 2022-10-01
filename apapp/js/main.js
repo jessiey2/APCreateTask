@@ -15,11 +15,11 @@ likeds: document.querySelector('.likeds'),
 dislikeds: document.querySelector('.dislikeds'),
 randoms: document.querySelector('.randoms'),
 all: document.querySelector('.all-display'),
-likebutton: document.getElementById("up"),
-dislikebutton: document.getElementById("down"),
-refreshbutton: document.getElementById("refresh"),
-removelbtn: document.getElementById("removel"),
-removedbtn: document.getElementById("removed"),
+likebutton: document.querySelector('.up'),
+dislikebutton: document.querySelector('.down'),
+refreshbutton: document.querySelector('.refresh'),
+removelbtn: document.querySelector('.removel'),
+removedbtn: document.querySelector('.removed'),
 
 };
 
@@ -27,8 +27,8 @@ window.addEventListener("DOMContentLoaded", function() {
     displayrandom(songs);
     displayliked(liked);
     displaydisliked(disliked);
-});
- 
+}); 
+
 function displayrandom(songs) {
      displayrandom = [songs[0]].map(function(card) {
         return `<article class="album-card" >
@@ -41,7 +41,7 @@ function displayrandom(songs) {
           <button class="button">Listen Now</button>
         </form>
         <div class="icons">
-          <button id="up">
+          <button class="up">
             <svg id="up"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -51,7 +51,7 @@ function displayrandom(songs) {
               />
             </svg>
           </button>
-          <button id="refresh">
+          <button class="refresh">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -61,7 +61,7 @@ function displayrandom(songs) {
               />
             </svg>
           </button>
-          <button id="down" >
+          <button class="down" >
             <svg
 id="down"
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,6 @@ id="down"
     DOMSelectors.randoms.innerHTML = displayrandom;
 };
 
-
 function displayliked(liked){
     let displayliked = liked.map(function(card){
         return `<article class="album-card" >
@@ -92,7 +91,7 @@ function displayliked(liked){
     <form target="_blank" action="${card.link}">
       <button class="button">Listen Now</button>
     </form>
-    <button id="removel" >
+    <button class="removel" >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
@@ -120,7 +119,7 @@ function displaydisliked(disliked){
     <form target="_blank" action="${card.link}">
       <button class="button">Listen Now</button>
     </form>
-    <button id="removed" >
+    <button class="removed" >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
