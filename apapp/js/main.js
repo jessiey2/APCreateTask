@@ -1,24 +1,25 @@
 import { songs } from "./albums";
 console.log(songs);
 let liked = [];
-let disliked =[];
+let disliked =[    
+ ];
 console.log(liked);
 console.log(disliked);
 
 const DOMSelectors = {
 likenav: document.querySelector('.lsongs'),
 dislikenav: document.querySelector('.dsongs'),
-likebutton: document.getElementById('up'),
-dislikebutton: document.getElementById('down'),
-refreshbutton: document.getElementById('refresh'),
-removel: document.getElementById('removel'),
-removed: document.getElementById('removed'),
 likedsection: document.querySelector('.likedsongs'),
 dislikedsection: document.querySelector('.dislikedsongs'),
 likeds: document.querySelector('.likeds'),
 dislikeds: document.querySelector('.dislikeds'),
 randoms: document.querySelector('.randoms'),
 all: document.querySelector('.all-display'),
+likebutton: document.getElementById("up"),
+dislikebutton: document.getElementById("down"),
+refreshbutton: document.getElementById("refresh"),
+removelbtn: document.getElementById("removel"),
+removedbtn: document.getElementById("removed"),
 
 };
 
@@ -27,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function() {
     displayliked(liked);
     displaydisliked(disliked);
 });
-
+ 
 function displayrandom(songs) {
      displayrandom = [songs[0]].map(function(card) {
         return `<article class="album-card" >
@@ -41,7 +42,7 @@ function displayrandom(songs) {
         </form>
         <div class="icons">
           <button id="up">
-            <svg
+            <svg id="up"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -62,7 +63,7 @@ function displayrandom(songs) {
           </button>
           <button id="down" >
             <svg
-
+id="down"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -78,6 +79,7 @@ function displayrandom(songs) {
     displayrandom = displayrandom.join("");
     DOMSelectors.randoms.innerHTML = displayrandom;
 };
+
 
 function displayliked(liked){
     let displayliked = liked.map(function(card){
@@ -152,23 +154,4 @@ DOMSelectors.dislikenav.addEventListener('click', function() {
          dislikedsection.style.display = "block";
        }
  });
- 
- 
- DOMSelectors.dislikebutton.addEventListener('click', function(e) {
-  e.target.parentElement.remove()
-});
- DOMSelectors.likebutton.addEventListener('click', function(card) {
-
-
- });
- DOMSelectors.refreshbutton.addEventListener('click', function(card) {
- });
- DOMSelectors.removed.addEventListener('click', function(index) {
-
- });
- DOMSelectors.removel.addEventListener('click', function(index) {
-
- });
- 
- 
  

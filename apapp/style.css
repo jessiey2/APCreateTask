@@ -56,14 +56,11 @@ h2 {
   margin-top: 2rem;
   transition: 0.3s;
 }
-.special:hover {
-  color: #1db954;
-}
-#b:hover {
-  color: #1db954;
-}
-#b:hover svg {
+.b:hover svg {
   fill: #1db954;
+}
+.b:hover{
+  color: #1db954;
 }
 #removed {
   fill: #1db954;
@@ -90,7 +87,7 @@ h2 {
 }
 .b {
   text-align: left;
-  transition: 0.3s;
+  transition: 0.2s;
   font-size: smaller;
 }
 .heart {
@@ -119,7 +116,7 @@ h2 {
   margin-right: 1rem;
 }
 .zzz{
-  transition: all 0.8s;
+  transition: all 0.2s;
   margin-top: 0px;
   margin-bottom: 2rem;
   padding: 10px;
@@ -169,7 +166,7 @@ h2 {
 }
 svg {
   width: 1.5rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 svg:hover {
   opacity: 0.7;
@@ -232,9 +229,7 @@ img {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-.button:hover {
-  background-color: #1db954c9;
-}
+
 button {
   background: none;
   border: none;
@@ -253,4 +248,8 @@ button {
   width: fit-content;
   margin-top: 2rem;
   transition: 0.3s;
+}
+.button:hover{
+  opacity: 0.8;
+
 }
