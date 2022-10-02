@@ -1,7 +1,19 @@
 import { songs } from "./albums";
 console.log(songs);
-let liked = [];
-let disliked =[    
+let liked = [      {
+  img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/775e8b48535813.589ac73d716b1.jpg",
+  alt: "my jinji album cover",
+  name: "My Jinji",
+  artist: "Sunset Roller Coaster",
+  link: "https://open.spotify.com/track/7wmFsS43fO8vAg0vcr776N?si=78d813ef765849c2",
+},];
+let disliked =[     {
+  img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/775e8b48535813.589ac73d716b1.jpg",
+  alt: "my jinji album cover",
+  name: "My Jinji",
+  artist: "Sunset Roller Coaster",
+  link: "https://open.spotify.com/track/7wmFsS43fO8vAg0vcr776N?si=78d813ef765849c2",
+},   
  ];
 console.log(liked);
 console.log(disliked);
@@ -15,11 +27,7 @@ likeds: document.querySelector('.likeds'),
 dislikeds: document.querySelector('.dislikeds'),
 randoms: document.querySelector('.randoms'),
 all: document.querySelector('.all-display'),
-likebutton: document.querySelector('.up'),
-dislikebutton: document.querySelector('.down'),
-refreshbutton: document.querySelector('.refresh'),
-removelbtn: document.querySelector('.removel'),
-removedbtn: document.querySelector('.removed'),
+card: document.querySelector('.album-card'),
 
 };
 
@@ -106,7 +114,17 @@ function displayliked(liked){
     );
     displayliked = displayliked.join("");
     DOMSelectors.likeds.innerHTML = displayliked;
-};
+    clearl();
+    const removelbtn = document.querySelectorAll('.removel');
+    removelbtn.forEach((button) => {
+        button.addEventListener('click', function(e) {
+            e.target.parentElement.parentElement.parentElement.remove()
+        })
+    })
+    };
+    function clearl() {
+    };
+
 
 function displaydisliked(disliked){
     let displaydisliked = disliked.map(function(card){
@@ -134,7 +152,19 @@ function displaydisliked(disliked){
     );
     displaydisliked = displaydisliked.join("");
     DOMSelectors.dislikeds.innerHTML = displaydisliked;
+
+    cleard();
+const removedbtn = document.querySelectorAll('.removed');
+removedbtn.forEach((button) => {
+    button.addEventListener('click', function(e) {
+        e.target.parentElement.parentElement.parentElement.remove()
+    })
+})
 };
+function cleard() {
+};
+
+
 
 DOMSelectors.likenav.addEventListener('click', function() {
    var likedsection = document.querySelector('.likedsongs');
@@ -153,4 +183,3 @@ DOMSelectors.dislikenav.addEventListener('click', function() {
          dislikedsection.style.display = "block";
        }
  });
- 
