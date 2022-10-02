@@ -86,7 +86,29 @@ id="down"
     });
     displayrandom = displayrandom.join("");
     DOMSelectors.randoms.innerHTML = displayrandom;
-};
+
+    refresh();
+    const refreshbtn = document.querySelectorAll('.refresh');
+    refreshbtn.forEach((rbutton) => {
+        rbutton.addEventListener('click', function(index) {
+          this.disliked.splice(index, 1);
+        })
+    });
+    liked();
+    const likebtn = document.querySelectorAll('.up');
+    likebtn.forEach((lbutton) => {
+        lbutton.addEventListener('click', function(this) {
+          this.liked.push();
+        })
+    })
+    
+    };
+    function refresh() {
+    };
+    function liked() {
+    };
+
+
 
 function displayliked(liked){
     let displayliked = liked.map(function(card){
