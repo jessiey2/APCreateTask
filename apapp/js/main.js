@@ -82,22 +82,20 @@ class="down"
     const refreshbtn = document.querySelectorAll('.refresh');
     refreshbtn.forEach((rbutton) => {
     rbutton.addEventListener('click', function(e) {
-      e.target.songs.splice()
+      console.log(e);
     }) 
   });
   like();
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
   lbutton.addEventListener('click', function(l) {
-    l.liked.push();
-    l.target.songs.splice();
+    console.log(l);
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
   dbutton.addEventListener('click', function(d) {
-    d.target.disliked.push();
-    d.target.songs.splice()
+    console.log(d);
   });
 })
 })};
