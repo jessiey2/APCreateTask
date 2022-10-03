@@ -1,20 +1,7 @@
 import { songs } from "./albums";
 console.log(songs);
-let liked = [      {
-  img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/775e8b48535813.589ac73d716b1.jpg",
-  alt: "my jinji album cover",
-  name: "My Jinji",
-  artist: "Sunset Roller Coaster",
-  link: "https://open.spotify.com/track/7wmFsS43fO8vAg0vcr776N?si=78d813ef765849c2",
-},];
-let disliked =[     {
-  img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/775e8b48535813.589ac73d716b1.jpg",
-  alt: "my jinji album cover",
-  name: "My Jinji",
-  artist: "Sunset Roller Coaster",
-  link: "https://open.spotify.com/track/7wmFsS43fO8vAg0vcr776N?si=78d813ef765849c2",
-},   
- ];
+let liked = [];
+let disliked =[];
 console.log(liked);
 console.log(disliked);
 
@@ -28,6 +15,9 @@ dislikeds: document.querySelector('.dislikeds'),
 randoms: document.querySelector('.randoms'),
 all: document.querySelector('.all-display'),
 card: document.querySelector('.album-card'),
+like: document.querySelector('.up'),
+dislike: document.querySelector('.down'),
+refresh: document.querySelector('.refresh'),
 
 };
 
@@ -50,7 +40,7 @@ function displayrandom(songs) {
         </form>
         <div class="icons">
           <button class="up">
-            <svg id="up"
+            <svg 
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -71,7 +61,7 @@ function displayrandom(songs) {
           </button>
           <button class="down" >
             <svg
-id="down"
+class="down"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -87,27 +77,37 @@ id="down"
     displayrandom = displayrandom.join("");
     DOMSelectors.randoms.innerHTML = displayrandom;
 
+
     refresh();
     const refreshbtn = document.querySelectorAll('.refresh');
     refreshbtn.forEach((rbutton) => {
-        rbutton.addEventListener('click', function(index) {
-          this.disliked.splice(index, 1);
-        })
-    });
-    liked();
-    const likebtn = document.querySelectorAll('.up');
-    likebtn.forEach((lbutton) => {
-        lbutton.addEventListener('click', function(this) {
-          this.liked.push();
-        })
-    })
-    
-    };
-    function refresh() {
-    };
-    function liked() {
-    };
+    rbutton.addEventListener('click', function(e) {
+      e.target.songs.splice()
+    }) 
+  });
+  like();
+  const likebtn = document.querySelectorAll('.up');
+  likebtn.forEach((lbutton) => {
+  lbutton.addEventListener('click', function(l) {
+    l.liked.push();
+    l.target.songs.splice();
+  });
+  dislike();
+  const dislikebtn = document.querySelectorAll('.down');
+  dislikebtn.forEach((dbutton) => {
+  dbutton.addEventListener('click', function(d) {
+    d.target.disliked.push();
+    d.target.songs.splice()
+  });
+})
+})};
 
+function refresh() {
+};
+  function like() {
+  };
+  function dislike() {
+  };
 
 
 function displayliked(liked){
@@ -161,12 +161,7 @@ function displaydisliked(disliked){
     </form>
     <button class="removed" >
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-    >
-      <path
-        d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z"
-      />
+      xmlns="http://www.w3.org/2000/svg"viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
     </svg>
   </button>
   </div>
@@ -176,17 +171,14 @@ function displaydisliked(disliked){
     DOMSelectors.dislikeds.innerHTML = displaydisliked;
 
     cleard();
-const removedbtn = document.querySelectorAll('.removed');
-removedbtn.forEach((button) => {
+    const removedbtn = document.querySelectorAll('.removed');
+    removedbtn.forEach((button) => {
     button.addEventListener('click', function(e) {
         e.target.parentElement.parentElement.parentElement.remove()
     })
-})
-};
+})};
 function cleard() {
 };
-
-
 
 DOMSelectors.likenav.addEventListener('click', function() {
    var likedsection = document.querySelector('.likedsongs');

@@ -9,6 +9,9 @@ body{
   margin: auto;
 
 }
+button:hover{
+  cursor: pointer;
+}
 .dislikedsongs{
   display: none;
   width: 90%;
