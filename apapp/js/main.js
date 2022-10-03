@@ -82,20 +82,20 @@ class="down"
     const refreshbtn = document.querySelectorAll('.refresh');
     refreshbtn.forEach((rbutton) => {
     rbutton.addEventListener('click', function(e) {
-      console.log(e);
+      console.log(songs[0])
     }) 
   });
   like();
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
   lbutton.addEventListener('click', function(l) {
-    console.log(l);
+    console.log(songs[0])
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
   dbutton.addEventListener('click', function(d) {
-    console.log(d);
+    console.log(songs[0])
   });
 })
 })};
