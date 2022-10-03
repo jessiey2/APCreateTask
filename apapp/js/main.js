@@ -2,8 +2,6 @@ import { songs } from "./albums";
 console.log(songs);
 let liked = [];
 let disliked =[];
-console.log(liked);
-console.log(disliked);
 
 const DOMSelectors = {
 likenav: document.querySelector('.lsongs'),
@@ -89,7 +87,9 @@ class="down"
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
   lbutton.addEventListener('click', function(l) {
-    console.log(songs[0])
+   like =  songs.splice(1);
+   console.log(like);
+   
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
@@ -179,6 +179,7 @@ function cleard() {
 };
 
 DOMSelectors.likenav.addEventListener('click', function() {
+  console.log(liked);
    var likedsection = document.querySelector('.likedsongs');
     if (likedsection.style.display === "block") {
         likedsection.style.display = "none";
@@ -188,6 +189,7 @@ DOMSelectors.likenav.addEventListener('click', function() {
 });
 
 DOMSelectors.dislikenav.addEventListener('click', function() {
+  console.log(disliked);
     var dislikedsection = document.querySelector('.dislikedsongs');
      if (dislikedsection.style.display === "block") {
          dislikedsection.style.display = "none";
