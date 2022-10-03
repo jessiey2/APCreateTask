@@ -26,7 +26,7 @@ button:hover{
   text-align: center;
   justify-content: center;
   width: 70%;
-  margin-top: 2rem;
+  padding-top: 5rem;
 margin: auto;
 }
 .dislikeds {
@@ -49,24 +49,25 @@ margin: auto;
   padding-top: 2rem;
 }
 .head{
-  margin-top: 5rem;
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
 }
 h2 {
   text-align: center;
   color: rgb(255, 255, 255);
-  font-size: 1.8rem;
+
   font-family: "Montserrat", sans-serif;
 }
 .special {
   margin: auto;
-  margin-top: 2rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .b:hover svg {
   fill: #1db954;
 }
 .b:hover{
   color: #1db954;
+  font-size: 1.9rem;
 }
 .removed {
   fill: #1db954;
@@ -94,7 +95,7 @@ h2 {
 .b {
   text-align: left;
   transition: 0.2s;
-  font-size: smaller;
+
 }
 .heart {
   fill: white;
@@ -207,7 +208,7 @@ svg:hover {
   justify-content: center;
   border-radius: 1.3rem;
   height: 30rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   background-color: #252525;
 }

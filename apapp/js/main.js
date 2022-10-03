@@ -88,6 +88,7 @@ class="down"
   likebtn.forEach((lbutton) => {
   lbutton.addEventListener('click', function() {
    like = songs.splice(1);
+   like.songs.push()
    console.log(like);
    
   });
@@ -95,7 +96,9 @@ class="down"
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
   dbutton.addEventListener('click', function() {
-    console.log(songs[0])
+    dislike = songs.splice(1);
+    dislike.songs.push()
+    console.log(dislike);
   });
 })
 })};
