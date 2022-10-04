@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function() {
 }); 
 
 function displayrandom(songs) {
-     displayrandom = [songs[0]].map(function(card) {
+     displayrandom = [randomsongs[0]].map(function(card) {
         return `<article class="album-card" >
         <img class="img" src="${card.img}" alt="${card.alt}" />
         <div class="text-group">
@@ -80,7 +80,8 @@ class="down"
     const refreshbtn = document.querySelectorAll('.refresh');
     refreshbtn.forEach((rbutton) => {
     rbutton.addEventListener('click', function() {
-      console.log(songs[0])
+     shuffle(songs);
+     console.log(arr);
     }) 
   });
   like();

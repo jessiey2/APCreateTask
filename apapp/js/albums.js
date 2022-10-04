@@ -1,4 +1,11 @@
 const songs =[
+  {
+    img: "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Dean_-_Instagram.jpg/220px-Dean_-_Instagram.jpg",
+    alt: "instagram  album cover",
+    name: "Instagram",
+    artist: "DEAN",
+    link: "https://open.spotify.com/track/6z1kLsntE7FuzKZHZWrXYN?si=125ce417a3a140be",
+  },
     {
       img: "https://i.scdn.co/image/ab67616d0000b273d6a601f98263dd6518344fb0",
       alt: "over 85 album cover",
@@ -233,13 +240,6 @@ const songs =[
       link: "https://open.spotify.com/track/1oSU9utRLTwXXqeQXu4tXx?si=3e2fb235ef40484f",
     },
     {
-      img: "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Dean_-_Instagram.jpg/220px-Dean_-_Instagram.jpg",
-      alt: "instagram  album cover",
-      name: "Instagram",
-      artist: "DEAN",
-      link: "https://open.spotify.com/track/6z1kLsntE7FuzKZHZWrXYN?si=125ce417a3a140be",
-    },
-    {
       img: "https://static.wikia.nocookie.net/kboy-group/images/3/3f/Try_Again.jpg/revision/latest?cb=20171124093214",
       alt: "try again album",
       name: "Try Again",
@@ -388,13 +388,6 @@ const songs =[
       name: "Kiss Me",
       artist: "DPR Live",
       link: "https://open.spotify.com/track/02K01fxmK5qQrwWSHGbb9d?si=8577935e77ac4325v",
-    },
-    {
-      img: "https://as1.ftcdn.net/v2/jpg/01/03/80/06/1000_F_103800647_ugTVlXO5BYF9hUtYCxpjIH9TwtKKZ3iJ.jpg",
-      alt: "end",
-      name: "The End!",
-      artist: "jessie yang",
-      link: "https://open.spotify.com/user/cbqgzk44ahfntfp2ddv7kny73?si=cw2B5TF5TFGxkPZ5zaZy_A",
     },
   ];
   export { songs };
