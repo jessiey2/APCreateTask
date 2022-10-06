@@ -240,7 +240,7 @@ const songs =[
       link: "https://open.spotify.com/track/1oSU9utRLTwXXqeQXu4tXx?si=3e2fb235ef40484f",
     },
     {
-      img: "https://static.wikia.nocookie.net/kboy-group/images/3/3f/Try_Again.jpg/revision/latest?cb=20171124093214",
+      img: "https://cdn.albumoftheyear.org/album/284466-try-again.jpg",
       alt: "try again album",
       name: "Try Again",
       artist: "Jaehyun, d.ear",
@@ -391,3 +391,4 @@ const songs =[
     },
   ];
   export { songs };
+  //  songs.sort(() => 0.5 - Math.random());
