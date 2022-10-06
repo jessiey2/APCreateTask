@@ -21,12 +21,12 @@ refresh: document.querySelector('.refresh'),
 
 window.addEventListener("DOMContentLoaded", function() {
     displayrandom(songs);
-    displayliked(liked);
+    
     displaydisliked(disliked);
 }); 
 
 function displayrandom(songs) {
-     displayrandom = [randomsongs[0]].map(function(card) {
+     displayrandom = [songs[0]].map(function(card) {
         return `<article class="album-card" >
         <img class="img" src="${card.img}" alt="${card.alt}" />
         <div class="text-group">
@@ -87,16 +87,20 @@ class="down"
   like();
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
-  lbutton.addEventListener('click', function() {
-   like = songs.splice(1);
-   console.log(like);
+  lbutton.addEventListener('click', function(card, index) {
+   like = songs.splice(index, 1);
+   liked.push(like);
+
+   console.log(liked);
+   displayliked(liked);
    
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
-  dbutton.addEventListener('click', function() {
+  dbutton.addEventListener('click', function(card) {
     dislike = songs.splice(1);
+    disliked.push(card, 1);
     console.log(dislike);
   });
 })
@@ -104,14 +108,15 @@ class="down"
 
 function refresh() {
 };
-  function like() {
-  };
-  function dislike() {
-  };
+function like() {
+};
+function dislike() {
+};
 
 
-function displayliked(liked){
-    let displayliked = liked.map(function(card){
+function displayliked(liked){ 
+    console.log(liked)
+    let displayliked = liked.forEach((like)=> like.map(function(card){
         return `<article class="album-card" >
     <img class="img" src="${card.img}" alt="${card.alt}" />
     <div class="text-group">
@@ -133,8 +138,10 @@ function displayliked(liked){
   </button>
   </div>
 </article>`}
-    );
+    ));
+    console.log(displayliked)
     displayliked = displayliked.join("");
+    
     DOMSelectors.likeds.innerHTML = displayliked;
     clearl();
     const removelbtn = document.querySelectorAll('.removel');
