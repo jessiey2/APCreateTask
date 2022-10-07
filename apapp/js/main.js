@@ -1,19 +1,7 @@
 import { songs } from "./albums";
 console.log(songs);
-let liked = [{
-  img: "https://m.media-amazon.com/images/I/A10dilSAZ4L._SS500_.jpg",
-  alt: "kiss me album cover",
-  name: "Kiss Me",
-  artist: "DPR Live",
-  link: "https://open.spotify.com/track/02K01fxmK5qQrwWSHGbb9d?si=8577935e77ac4325v",
-},];
-let disliked =[    {
-  img: "https://images-eu.ssl-images-amazon.com/images/I/51YoCZ9-6hL._SX300_SY300_QL70_ML2_.jpg",
-  alt: "i love it album cover",
-  name: "I Love It",
-  artist: "DEAN",
-  link: "https://open.spotify.com/track/6CBA5xTE7Z4cyA9rzlhFdA?si=90af77f7a0414122",
-},];
+let liked = [];
+let disliked =[];
 
 const DOMSelectors = {
 likenav: document.querySelector('.lsongs'),
@@ -29,9 +17,9 @@ card: document.querySelector('.album-card'),
 };
 
 window.addEventListener("DOMContentLoaded", function() {
-    displayrandom(songs);
     displayliked(liked);
     displaydisliked(disliked);
+    displayrandom(songs);
 }); 
 
 function displayrandom(songs) {
@@ -83,35 +71,39 @@ class="down"
     });
     displayrandom = displayrandom.join("");
     DOMSelectors.randoms.innerHTML = displayrandom;
-
-    refresh();
-    const refreshbtn = document.querySelectorAll('.refresh');
-    refreshbtn.forEach((rbutton) => {
-    rbutton.addEventListener('click', function() {
-    }) 
-  });
   like();
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
-  lbutton.addEventListener('click', function( ) {
+  lbutton.addEventListener('click', function() {
    like = songs.shift();
    liked.push(like);
    console.log(liked);
    console.log(songs);
    displayliked(liked);
-
   });
+
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
-  dbutton.addEventListener('click', function( ) {
+  dbutton.addEventListener('click', function() {
     dislike = songs.shift();
     disliked.push(dislike);
     console.log(disliked);
     console.log(songs);
     displaydisliked(disliked);
   });
-})
+
+  refresh();
+  const refreshbtn = document.querySelectorAll('.refresh');
+  refreshbtn.forEach((rbutton) => {
+  rbutton.addEventListener('click', function(index) {
+    songs = songs.sort(() => 0.5 - Math.random());
+    console.log(songs);
+    displayrandom(songs);
+  }) 
+});
+
+});
 })};
 
 function refresh() {
@@ -189,22 +181,41 @@ function displaydisliked(disliked){
 function cleard() {
 };
 
+DOMSelectors.randomnav.addEventListener('click', function() {
+  console.log(liked);
+  var randoms = document.querySelector('.randoms');
+   var likedsection = document.querySelector('.likedsongs');
+   var dislikedsection = document.querySelector('.dislikedsongs');
+    if (randoms.style.display === "block") {
+        likedsection.style.display = "none";
+        dislikedsection.style.display = "none";
+      } else {
+        randoms.style.display === "block"
+        likedsection.style.display = "none";
+        dislikedsection.style.display = "none";
+      }
+});
+
 DOMSelectors.likenav.addEventListener('click', function() {
   console.log(liked);
    var likedsection = document.querySelector('.likedsongs');
+   var dislikedsection = document.querySelector('.dislikedsongs');
     if (likedsection.style.display === "block") {
         likedsection.style.display = "none";
       } else {
         likedsection.style.display = "block";
+        dislikedsection.style.display = "none";
       }
 });
 
 DOMSelectors.dislikenav.addEventListener('click', function() {
   console.log(disliked);
     var dislikedsection = document.querySelector('.dislikedsongs');
+    var likedsection = document.querySelector('.likedsongs');
      if (dislikedsection.style.display === "block") {
          dislikedsection.style.display = "none";
        } else {
          dislikedsection.style.display = "block";
+         likedsection.style.display = "none";
        }
  });

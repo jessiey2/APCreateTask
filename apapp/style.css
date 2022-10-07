@@ -26,7 +26,7 @@ button:hover{
   text-align: center;
   justify-content: center;
   width: 70%;
-  padding-top: 2rem;
+  padding-top: 5rem;
 margin: auto;
 }
 .dislikeds {
@@ -49,13 +49,12 @@ margin: auto;
   padding-top: 2rem;
 }
 .head{
-
+  margin-top: 0;
   font-size: 2rem;
 }
 h2 {
   text-align: center;
   color: rgb(255, 255, 255);
-
   font-family: "Montserrat", sans-serif;
 }
 .special {
