@@ -96,7 +96,7 @@ class="down"
   refresh();
   const refreshbtn = document.querySelectorAll('.refresh');
   refreshbtn.forEach((rbutton) => {
-  rbutton.addEventListener('click', function(index) {
+  rbutton.addEventListener('click', function() {
     songs = songs.sort(() => 0.5 - Math.random());
     console.log(songs);
     displayrandom(songs);
