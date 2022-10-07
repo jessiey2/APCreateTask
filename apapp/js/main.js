@@ -1,7 +1,19 @@
 import { songs } from "./albums";
 console.log(songs);
-let liked = [];
-let disliked =[];
+let liked = [{
+  img: "https://m.media-amazon.com/images/I/A10dilSAZ4L._SS500_.jpg",
+  alt: "kiss me album cover",
+  name: "Kiss Me",
+  artist: "DPR Live",
+  link: "https://open.spotify.com/track/02K01fxmK5qQrwWSHGbb9d?si=8577935e77ac4325v",
+},];
+let disliked =[    {
+  img: "https://images-eu.ssl-images-amazon.com/images/I/51YoCZ9-6hL._SX300_SY300_QL70_ML2_.jpg",
+  alt: "i love it album cover",
+  name: "I Love It",
+  artist: "DEAN",
+  link: "https://open.spotify.com/track/6CBA5xTE7Z4cyA9rzlhFdA?si=90af77f7a0414122",
+},];
 
 const DOMSelectors = {
 likenav: document.querySelector('.lsongs'),
@@ -13,16 +25,11 @@ dislikeds: document.querySelector('.dislikeds'),
 randoms: document.querySelector('.randoms'),
 all: document.querySelector('.all-display'),
 card: document.querySelector('.album-card'),
-like: document.querySelector('.up'),
-dislike: document.querySelector('.down'),
-refresh: document.querySelector('.refresh'),
-
 };
 
 window.addEventListener("DOMContentLoaded", function() {
     displayrandom(songs);
-    
-    displaydisliked(disliked);
+
 }); 
 
 function displayrandom(songs) {
@@ -75,33 +82,29 @@ class="down"
     displayrandom = displayrandom.join("");
     DOMSelectors.randoms.innerHTML = displayrandom;
 
-
     refresh();
     const refreshbtn = document.querySelectorAll('.refresh');
     refreshbtn.forEach((rbutton) => {
     rbutton.addEventListener('click', function() {
-     shuffle(songs);
-     console.log(arr);
     }) 
   });
   like();
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
-  lbutton.addEventListener('click', function(card, index) {
+  lbutton.addEventListener('click', function( index) {
    like = songs.splice(index, 1);
-   liked.push(like);
-
+   liked.push(index);
    console.log(liked);
    displayliked(liked);
-   
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
-  dbutton.addEventListener('click', function(card) {
-    dislike = songs.splice(1);
-    disliked.push(card, 1);
-    console.log(dislike);
+  dbutton.addEventListener('click', function( index) {
+    dislike = songs.splice(index, 1);
+    disliked.push(index);
+    console.log(disliked);
+    displaydisliked(disliked);
   });
 })
 })};
@@ -113,10 +116,8 @@ function like() {
 function dislike() {
 };
 
-
 function displayliked(liked){ 
-    console.log(liked)
-    let displayliked = liked.forEach((like)=> like.map(function(card){
+    let displayliked = liked.map(function(card){
         return `<article class="album-card" >
     <img class="img" src="${card.img}" alt="${card.alt}" />
     <div class="text-group">
@@ -138,7 +139,7 @@ function displayliked(liked){
   </button>
   </div>
 </article>`}
-    ));
+    );
     console.log(displayliked)
     displayliked = displayliked.join("");
     
@@ -153,7 +154,6 @@ function displayliked(liked){
     };
     function clearl() {
     };
-
 
 function displaydisliked(disliked){
     let displaydisliked = disliked.map(function(card){
@@ -176,7 +176,6 @@ function displaydisliked(disliked){
     );
     displaydisliked = displaydisliked.join("");
     DOMSelectors.dislikeds.innerHTML = displaydisliked;
-
     cleard();
     const removedbtn = document.querySelectorAll('.removed');
     removedbtn.forEach((button) => {
