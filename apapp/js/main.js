@@ -93,20 +93,22 @@ class="down"
   like();
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
-  lbutton.addEventListener('click', function( index) {
-   like = songs.splice(index, 1);
-   liked.push(index);
+  lbutton.addEventListener('click', function( ) {
+   like = songs.shift();
+   liked.push(like);
    console.log(liked);
+   console.log(songs);
    displayliked(liked);
 
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
-  dbutton.addEventListener('click', function( index) {
-    dislike = songs.splice(index, 1);
-    disliked.push(index);
+  dbutton.addEventListener('click', function( ) {
+    dislike = songs.shift();
+    disliked.push(dislike);
     console.log(disliked);
+    console.log(songs);
     displaydisliked(disliked);
   });
 })
@@ -143,7 +145,6 @@ function displayliked(liked){
   </div>
 </article>`}
     );
-    console.log(displayliked)
     displayliked = displayliked.join("");
     DOMSelectors.likeds.innerHTML = displayliked;
     clearl();
