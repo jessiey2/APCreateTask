@@ -18,6 +18,7 @@ let disliked =[    {
 const DOMSelectors = {
 likenav: document.querySelector('.lsongs'),
 dislikenav: document.querySelector('.dsongs'),
+randomnav: document.querySelector('.rsongs'),
 likedsection: document.querySelector('.likedsongs'),
 dislikedsection: document.querySelector('.dislikedsongs'),
 likeds: document.querySelector('.likeds'),
@@ -29,7 +30,8 @@ card: document.querySelector('.album-card'),
 
 window.addEventListener("DOMContentLoaded", function() {
     displayrandom(songs);
-
+    displayliked(liked);
+    displaydisliked(disliked);
 }); 
 
 function displayrandom(songs) {
@@ -96,6 +98,7 @@ class="down"
    liked.push(index);
    console.log(liked);
    displayliked(liked);
+
   });
   dislike();
   const dislikebtn = document.querySelectorAll('.down');
@@ -142,7 +145,6 @@ function displayliked(liked){
     );
     console.log(displayliked)
     displayliked = displayliked.join("");
-    
     DOMSelectors.likeds.innerHTML = displayliked;
     clearl();
     const removelbtn = document.querySelectorAll('.removel');

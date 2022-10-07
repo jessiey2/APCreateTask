@@ -391,4 +391,4 @@ const songs =[
     },
   ];
   export { songs };
-//songs.sort(() => 0.5 - Math.random());
+songs.sort(() => 0.5 - Math.random());
