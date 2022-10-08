@@ -89,6 +89,7 @@ class="down"
     dislike = songs.shift();
     disliked.push(dislike);
     console.log(disliked);
+    console.log(songs);
     displaydisliked(disliked);
   });
 
@@ -97,6 +98,7 @@ class="down"
   refreshbtn.forEach((rbutton) => {
   rbutton.addEventListener('click', function() {
     songs = songs.sort(() => 0.5 - Math.random());
+    console.log(songs);
     displayrandom(songs);
   }) 
 });
