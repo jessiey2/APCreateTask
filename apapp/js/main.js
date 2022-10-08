@@ -92,7 +92,6 @@ class="down"
     console.log(songs);
     displaydisliked(disliked);
   });
-
   refresh();
   const refreshbtn = document.querySelectorAll('.refresh');
   refreshbtn.forEach((rbutton) => {
@@ -102,7 +101,6 @@ class="down"
     displayrandom(songs);
   }) 
 });
-
 });
 })};
 
