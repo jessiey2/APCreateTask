@@ -17,10 +17,14 @@ card: document.querySelector('.album-card'),
 };
 
 window.addEventListener("DOMContentLoaded", function() {
+  shuffle(songs);
     displayliked(liked);
     displaydisliked(disliked);
     displayrandom(songs);
 }); 
+function shuffle(songs){
+  songs = songs.sort(() => 0.5 - Math.random());
+}
 
 function displayrandom(songs) {
   
