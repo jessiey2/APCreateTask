@@ -1,4 +1,18 @@
 const songs =[
+      {
+      img: "https://i.scdn.co/image/ab67616d0000b2730cf5d8049db06a49cc7df7ba",
+      alt: "enough album cover",
+      name: "Enough ",
+      artist: "Colde, 정유미 & Apro",
+      link: "https://open.spotify.com/track/1JB8Y5r1Pee8E8b7J1Kf1q?si=ef1eba160ed94d5e",
+    },
+  {
+    img: "https://m.media-amazon.com/images/I/81vp4W6hHeL._SS500_.jpg",
+    alt: "binu album cover",
+    name: "BINU",
+    artist: "BIBI",
+    link: "https://open.spotify.com/track/0lSJQip2wVidbu1JfZ4IEQ?si=f5385dc2f0a54e3b",
+  },
   {
     img: "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Dean_-_Instagram.jpg/220px-Dean_-_Instagram.jpg",
     alt: "instagram  album cover",
@@ -153,13 +167,6 @@ const songs =[
       name: "After Like",
       artist: "IVE",
       link: "https://open.spotify.com/track/2gYj9lubBorOPIVWsTXugG?si=bd407b1867234a37",
-    },
-    {
-      img: "https://i.scdn.co/image/ab67616d0000b2730cf5d8049db06a49cc7df7ba",
-      alt: "enough album cover",
-      name: "Enough ",
-      artist: "Colde, 정유미 & Apro",
-      link: "https://open.spotify.com/track/1JB8Y5r1Pee8E8b7J1Kf1q?si=ef1eba160ed94d5e",
     },
     {
       img: "https://upload.wikimedia.org/wikipedia/en/c/cd/Taylor_Swift_-_Lover.png",

@@ -23,6 +23,7 @@ window.addEventListener("DOMContentLoaded", function() {
 }); 
 
 function displayrandom(songs) {
+  
      displayrandom = [songs[0]].map(function(card) {
         return `<article class="album-card" >
         <img class="img" src="${card.img}" alt="${card.alt}" />
