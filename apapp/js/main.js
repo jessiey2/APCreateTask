@@ -27,7 +27,6 @@ function shuffle(songs){
 }
 
 function displayrandom(songs) {
-  
      displayrandom = [songs[0]].map(function(card) {
         return `<article class="album-card" >
         <img class="img" src="${card.img}" alt="${card.alt}" />
@@ -108,12 +107,14 @@ class="down"
 });
 });
 })};
-
 function refresh() {
+  displayrandom(songs);
 };
 function like() {
+  displayrandom(songs);
 };
 function dislike() {
+  displayrandom(songs);
 };
 
 function displayliked(liked){ 
