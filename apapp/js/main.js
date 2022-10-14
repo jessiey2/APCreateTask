@@ -76,6 +76,19 @@ class="down"
     displayrandom = displayrandom.join("");
     DOMSelectors.randoms.innerHTML = displayrandom;
   like();
+  dislike();
+  refresh();
+};
+function refresh() {
+  const refreshbtn = document.querySelectorAll('.refresh');
+  refreshbtn.forEach((rbutton) => {
+  rbutton.addEventListener('click', function() {
+    songs = songs.sort(() => 0.5 - Math.random());
+    console.log(songs);
+    displayrandom(songs);
+  }) 
+})};
+function like() {
   const likebtn = document.querySelectorAll('.up');
   likebtn.forEach((lbutton) => {
   lbutton.addEventListener('click', function() {
@@ -84,9 +97,9 @@ class="down"
    console.log(liked);
    console.log(songs);
    displayliked(liked);
-  });
+  })})};
 
-  dislike();
+function dislike() {
   const dislikebtn = document.querySelectorAll('.down');
   dislikebtn.forEach((dbutton) => {
   dbutton.addEventListener('click', function() {
@@ -96,26 +109,7 @@ class="down"
     console.log(songs);
     displaydisliked(disliked);
   });
-  refresh();
-  const refreshbtn = document.querySelectorAll('.refresh');
-  refreshbtn.forEach((rbutton) => {
-  rbutton.addEventListener('click', function() {
-    songs = songs.sort(() => 0.5 - Math.random());
-    console.log(songs);
-    displayrandom(songs);
-  }) 
-});
-});
 })};
-function refresh() {
-  displayrandom(songs);
-};
-function like() {
-  displayrandom(songs);
-};
-function dislike() {
-  displayrandom(songs);
-};
 
 function displayliked(liked){ 
     let displayliked = liked.map(function(card){
